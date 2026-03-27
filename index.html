@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Маникюр Братиславская</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -12,62 +11,65 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #0f0f0f;
-  color: #fff;
+  color: white;
 }
 
 .hero {
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
+  background: radial-gradient(circle at center, #1a1a1a, #000);
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-family: 'Playfair Display';
+  font-size: 42px;
 }
 
 p {
-  color: #ccc;
+  color: #aaa;
 }
 
 button {
-  padding: 14px 24px;
-  margin: 10px;
-  border: none;
+  padding: 14px 28px;
   border-radius: 30px;
+  border: none;
   background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
   color: white;
   font-weight: bold;
+  margin-top: 20px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: scale(1.05);
 }
 
 section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .card {
   background: #1a1a1a;
   padding: 20px;
-  margin: 10px;
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,77,109,0.2);
+}
+
+.gallery img {
+  width: 90%;
+  border-radius: 15px;
+  margin: 10px 0;
 }
 
 input {
   padding: 12px;
-  margin: 5px;
   width: 80%;
   border-radius: 10px;
   border: none;
-}
-
-.cta {
-  background: #111;
+  margin: 5px;
 }
 </style>
 </head>
@@ -82,9 +84,17 @@ input {
 
 <section>
   <h2>Почему выбирают нас</h2>
-  <div class="card">Скорость — 60 минут</div>
-  <div class="card">Гарантия 7 дней</div>
-  <div class="card">Опыт мастеров 5+ лет</div>
+  <div class="cards">
+    <div class="card">Скорость — 60 минут</div>
+    <div class="card">Гарантия 7 дней</div>
+    <div class="card">Опыт мастеров 5+ лет</div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Наши работы</h2>
+  <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+  <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc">
 </section>
 
 <section>
@@ -92,12 +102,10 @@ input {
   <p>Маникюр + гель-лак — от 1500 ₽</p>
 </section>
 
-<section class="cta">
+<section>
   <h2>Запишитесь сейчас</h2>
-  <input placeholder="Ваше имя">
-  <br>
-  <input placeholder="Телефон">
-  <br>
+  <input placeholder="Имя"><br>
+  <input placeholder="Телефон"><br>
   <button>Получить скидку</button>
 </section>
 
